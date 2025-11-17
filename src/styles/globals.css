@@ -17,8 +17,8 @@
   /* Accent Colors */
   --accent-cyan: #00D9FF;
   --accent-cyan-glow: rgba(0, 217, 255, 0.5);
-  --accent-purple: #9D4EDD;
-  --accent-purple-glow: rgba(157, 78, 221, 0.5);
+  --accent-purple: #00BC7C;
+  --accent-purple-glow: rgba(0, 188, 124, 0.5);
   --accent-pink: #FF1B8D;
   --accent-pink-glow: rgba(255, 27, 141, 0.5);
   --accent-green: #00FF94;
@@ -43,7 +43,7 @@
   --popover-foreground: #FFFFFF;
   --primary: #00D9FF;
   --primary-foreground: #0A0A0F;
-  --secondary: #9D4EDD;
+  --secondary: #00BC7C;
   --secondary-foreground: #FFFFFF;
   --muted: rgba(255, 255, 255, 0.1);
   --muted-foreground: rgba(255, 255, 255, 0.5);
@@ -60,7 +60,7 @@
   --ring: rgba(0, 217, 255, 0.5);
   --radius: 1rem;
   --chart-1: #00D9FF;
-  --chart-2: #9D4EDD;
+  --chart-2: #00BC7C;
   --chart-3: #FF1B8D;
   --chart-4: #00FF94;
   --chart-5: #FFD60A;
@@ -83,7 +83,7 @@
   --popover-foreground: #FFFFFF;
   --primary: #00D9FF;
   --primary-foreground: #0A0A0F;
-  --secondary: #9D4EDD;
+  --secondary: #00BC7C;
   --secondary-foreground: #FFFFFF;
   --muted: rgba(255, 255, 255, 0.1);
   --muted-foreground: rgba(255, 255, 255, 0.5);
@@ -97,7 +97,7 @@
   --font-weight-medium: 600;
   --font-weight-normal: 400;
   --chart-1: #00D9FF;
-  --chart-2: #9D4EDD;
+  --chart-2: #00BC7C;
   --chart-3: #FF1B8D;
   --chart-4: #00FF94;
   --chart-5: #FFD60A;
@@ -121,7 +121,7 @@
   --popover-foreground: #0A0A0F;
   --primary: #0099FF;
   --primary-foreground: #FFFFFF;
-  --secondary: #9D4EDD;
+  --secondary: #00BC7C;
   --secondary-foreground: #FFFFFF;
   --muted: rgba(0, 0, 0, 0.1);
   --muted-foreground: rgba(0, 0, 0, 0.6);
@@ -303,21 +303,21 @@ body {
 
 /* Gradient text effect */
 .gradient-text {
-  background: linear-gradient(135deg, #00D9FF, #9D4EDD, #FF1B8D);
+  background: linear-gradient(135deg, #00D9FF, #00BC7C, #FF1B8D);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-cyan-purple {
-  background: linear-gradient(135deg, #00D9FF, #9D4EDD);
+  background: linear-gradient(135deg, #00D9FF, #00BC7C);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-purple-pink {
-  background: linear-gradient(135deg, #9D4EDD, #FF1B8D);
+  background: linear-gradient(135deg, #00BC7C, #FF1B8D);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -329,7 +329,7 @@ body {
 }
 
 .glow-purple {
-  box-shadow: 0 0 40px rgba(157, 78, 221, 0.5);
+  box-shadow: 0 0 40px rgba(0, 188, 124, 0.5);
 }
 
 .glow-pink {

@@ -55,7 +55,7 @@ export function Hero({ theme, language, onNavigateToWork }: HeroProps) {
           <span className={`px-4 py-2 rounded-full glass border uppercase tracking-wider text-xs transition-colors duration-500 ${
             theme === "dark" 
               ? "bg-[#00D9FF]/10 border-[#00D9FF]/20 text-[#00D9FF]" 
-              : "bg-[#9D4EDD]/10 border-[#9D4EDD]/20 text-[#9D4EDD]"
+              : "bg-[#00BC7C]/10 border-[#00BC7C]/20 text-[#00BC7C]"
           }`}>
             {t.role}
           </span>
@@ -99,8 +99,8 @@ export function Hero({ theme, language, onNavigateToWork }: HeroProps) {
             }}
             className={`px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-2 relative overflow-hidden ${
               theme === "dark" 
-                ? "bg-gradient-to-r from-[#00D9FF] to-[#9D4EDD] text-white shadow-[0_8px_32px_rgba(0,217,255,0.4)]" 
-                : "bg-gradient-to-r from-[#0099FF] to-[#9D4EDD] text-white shadow-[0_8px_32px_rgba(0,153,255,0.4)]"
+                ? "bg-gradient-to-r from-[#00D9FF] to-[#00BC7C] text-white shadow-[0_8px_32px_rgba(0,217,255,0.4)]" 
+                : "bg-gradient-to-r from-[#0099FF] to-[#00BC7C] text-white shadow-[0_8px_32px_rgba(0,153,255,0.4)]"
             }`}
             whileHover={{ scale: 1.05, y: -4 }}
             whileTap={{ scale: 0.98 }}

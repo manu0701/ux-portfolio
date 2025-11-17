@@ -25,19 +25,19 @@ export function CustomCursor({ theme }: CustomCursorProps) {
             element.classList.contains("glass-strong") ||
             element.closest(".glass") ||
             element.closest(".glass-strong")) {
-          setCursorColor(theme === "dark" ? "rgba(0, 217, 255, 0.8)" : "rgba(157, 78, 221, 0.9)");
+          setCursorColor(theme === "dark" ? "rgba(0, 217, 255, 0.8)" : "rgba(0, 188, 124, 0.9)");
         } else if (element.tagName === "BUTTON" || 
                    element.tagName === "A" ||
                    element.closest("button") ||
                    element.closest("a")) {
           setCursorColor(theme === "dark" ? "rgba(255, 27, 141, 0.8)" : "rgba(255, 27, 141, 0.9)");
         } else if (bgColor.includes("rgb(0, 217, 255)") || 
-                   bgColor.includes("rgb(157, 78, 221)")) {
+                   bgColor.includes("rgb(0, 188, 124)")) {
           setCursorColor("rgba(255, 255, 255, 0.9)");
         } else {
           setCursorColor(theme === "dark" 
             ? "rgba(0, 217, 255, 0.6)" 
-            : "rgba(157, 78, 221, 0.8)");
+            : "rgba(0, 188, 124, 0.8)");
         }
       }
     };
@@ -85,7 +85,7 @@ export function CustomCursor({ theme }: CustomCursorProps) {
             boxShadow: theme === "dark" 
               ? `0 0 20px ${cursorColor}, 0 0 40px ${cursorColor}` 
               : `0 0 15px ${cursorColor}, 0 0 30px ${cursorColor}`,
-            border: theme === "light" ? "2px solid rgba(157, 78, 221, 0.3)" : "none",
+            border: theme === "light" ? "2px solid rgba(0, 188, 124, 0.3)" : "none",
           }}
         />
       </motion.div>

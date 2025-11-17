@@ -119,7 +119,7 @@ export function About({ theme, language }: AboutProps) {
               className={`glass-strong group relative p-8 rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer hover:-translate-y-2 ${
                 theme === "dark"
                   ? "hover:border-white/20 hover:shadow-[0_20px_60px_rgba(0,217,255,0.3)]"
-                  : "hover:border-black/20 hover:shadow-[0_20px_60px_rgba(157,78,221,0.3)]"
+                  : "hover:border-black/20 hover:shadow-[0_20px_60px_rgba(0,188,124,0.3)]"
               }`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -128,8 +128,8 @@ export function About({ theme, language }: AboutProps) {
             >
               {/* Gradient accent line */}
               <div className={`w-12 h-1 rounded-full mb-4 ${
-                index === 0 ? "bg-gradient-to-r from-[#00D9FF] to-[#9D4EDD]" :
-                index === 1 ? "bg-gradient-to-r from-[#9D4EDD] to-[#FF1B8D]" :
+                index === 0 ? "bg-gradient-to-r from-[#00D9FF] to-[#00BC7C]" :
+                index === 1 ? "bg-gradient-to-r from-[#00BC7C] to-[#FF1B8D]" :
                 "bg-gradient-to-r from-[#FF1B8D] to-[#00FF94]"
               }`} />
               

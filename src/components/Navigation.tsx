@@ -121,7 +121,7 @@ export function Navigation({
                   activeSection === item.id
                     ? theme === "dark" 
                       ? "border-[#00D9FF]/50 bg-[#00D9FF]/10 text-[#00D9FF]" 
-                      : "border-[#9D4EDD]/50 bg-[#9D4EDD]/10 text-[#9D4EDD]"
+                      : "border-[#00BC7C]/50 bg-[#00BC7C]/10 text-[#00BC7C]"
                     : theme === "dark"
                       ? "hover:bg-white/10 hover:border-white/20"
                       : "hover:bg-black/10 hover:border-black/20"

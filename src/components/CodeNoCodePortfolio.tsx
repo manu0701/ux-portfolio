@@ -182,11 +182,11 @@ export function CodeNoCodePortfolio({ theme, language, onBack }: CodeNoCodePortf
             >
               <div className={`glass inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full ${
                 theme === "dark" 
-                  ? "bg-gradient-to-r from-[#00D9FF]/20 to-[#9D4EDD]/20 border-[#00D9FF]/20" 
-                  : "bg-gradient-to-r from-[#0099FF]/20 to-[#9D4EDD]/20 border-[#0099FF]/20"
+                  ? "bg-gradient-to-r from-[#00D9FF]/20 to-[#00BC7C]/20 border-[#00D9FF]/20" 
+                  : "bg-gradient-to-r from-[#0099FF]/20 to-[#00BC7C]/20 border-[#0099FF]/20"
               }`}>
                 <span className="text-2xl">⚡</span>
-                <span className={`text-sm uppercase tracking-wider ${theme === "dark" ? "text-[#00D9FF]" : "text-[#9D4EDD]"}`}>
+                <span className={`text-sm uppercase tracking-wider ${theme === "dark" ? "text-[#00D9FF]" : "text-[#00BC7C]"}`}>
                   {language === "en" ? "AI-Powered" : "Impulsado por IA"}
                 </span>
               </div>
@@ -211,7 +211,7 @@ export function CodeNoCodePortfolio({ theme, language, onBack }: CodeNoCodePortf
                   className={`glass-strong group rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.01] ${
                     theme === "dark"
                       ? "hover:border-white/20 hover:shadow-[0_20px_60px_rgba(0,217,255,0.3)]"
-                      : "hover:border-black/20 hover:shadow-[0_20px_60px_rgba(157,78,221,0.3)]"
+                      : "hover:border-black/20 hover:shadow-[0_20px_60px_rgba(0,188,124,0.3)]"
                   }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -223,7 +223,7 @@ export function CodeNoCodePortfolio({ theme, language, onBack }: CodeNoCodePortf
                     <div className={`w-12 h-1 ${project.color} rounded-full mb-4 transition-all duration-300 group-hover:w-20 group-hover:shadow-lg`} />
                     <h3 className="mb-2">{project.title}</h3>
                     <div className={`flex items-center gap-2 ${
-                      theme === "dark" ? "text-[#00D9FF]" : "text-[#9D4EDD]"
+                      theme === "dark" ? "text-[#00D9FF]" : "text-[#00BC7C]"
                     }`}>
                       <span className="text-sm">{project.tool}</span>
                     </div>
@@ -258,8 +258,8 @@ export function CodeNoCodePortfolio({ theme, language, onBack }: CodeNoCodePortf
                       rel="noopener noreferrer"
                       className={`flex-1 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm hover:scale-[1.02] hover:-translate-y-1 ${
                         theme === "dark"
-                          ? "bg-gradient-to-r from-[#00D9FF] to-[#9D4EDD] text-white shadow-[0_8px_32px_rgba(0,217,255,0.4)]"
-                          : "bg-gradient-to-r from-[#0099FF] to-[#9D4EDD] text-white shadow-[0_8px_32px_rgba(0,153,255,0.4)]"
+                          ? "bg-gradient-to-r from-[#00D9FF] to-[#00BC7C] text-white shadow-[0_8px_32px_rgba(0,217,255,0.4)]"
+                          : "bg-gradient-to-r from-[#0099FF] to-[#00BC7C] text-white shadow-[0_8px_32px_rgba(0,153,255,0.4)]"
                       } ${!project.liveUrl ? "pointer-events-none opacity-50" : ""}`}
                     >
                       {t.viewLive}
