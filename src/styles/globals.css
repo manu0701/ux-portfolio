@@ -1,0 +1,393 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Liquid Glass Design System */
+  --font-size: 16px;
+  
+  /* Primary Colors - Deep Dark Background */
+  --bg-primary: #0A0A0F;
+  --bg-secondary: #13141B;
+  
+  /* Glass Effects */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-strong: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-strong: rgba(255, 255, 255, 0.15);
+  
+  /* Accent Colors */
+  --accent-cyan: #00D9FF;
+  --accent-cyan-glow: rgba(0, 217, 255, 0.5);
+  --accent-purple: #9D4EDD;
+  --accent-purple-glow: rgba(157, 78, 221, 0.5);
+  --accent-pink: #FF1B8D;
+  --accent-pink-glow: rgba(255, 27, 141, 0.5);
+  --accent-green: #00FF94;
+  --accent-green-glow: rgba(0, 255, 148, 0.5);
+  --accent-orange: #FF6B35;
+  --accent-orange-glow: rgba(255, 107, 53, 0.5);
+  --accent-yellow: #FFD60A;
+  --accent-yellow-glow: rgba(255, 214, 10, 0.5);
+  
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --text-muted: rgba(255, 255, 255, 0.3);
+  
+  /* Legacy Variables for Compatibility */
+  --background: #0A0A0F;
+  --foreground: #FFFFFF;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #FFFFFF;
+  --popover: rgba(255, 255, 255, 0.08);
+  --popover-foreground: #FFFFFF;
+  --primary: #00D9FF;
+  --primary-foreground: #0A0A0F;
+  --secondary: #9D4EDD;
+  --secondary-foreground: #FFFFFF;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: rgba(255, 255, 255, 0.5);
+  --accent: #FF1B8D;
+  --accent-foreground: #FFFFFF;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.05);
+  --switch-background: rgba(255, 255, 255, 0.15);
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: rgba(0, 217, 255, 0.5);
+  --radius: 1rem;
+  --chart-1: #00D9FF;
+  --chart-2: #9D4EDD;
+  --chart-3: #FF1B8D;
+  --chart-4: #00FF94;
+  --chart-5: #FFD60A;
+  --sidebar: rgba(255, 255, 255, 0.05);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #00D9FF;
+  --sidebar-primary-foreground: #0A0A0F;
+  --sidebar-accent: rgba(255, 255, 255, 0.08);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(0, 217, 255, 0.5);
+}
+
+.dark {
+  --background: #0A0A0F;
+  --foreground: #FFFFFF;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #FFFFFF;
+  --popover: rgba(255, 255, 255, 0.08);
+  --popover-foreground: #FFFFFF;
+  --primary: #00D9FF;
+  --primary-foreground: #0A0A0F;
+  --secondary: #9D4EDD;
+  --secondary-foreground: #FFFFFF;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: rgba(255, 255, 255, 0.5);
+  --accent: #FF1B8D;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.05);
+  --ring: rgba(0, 217, 255, 0.5);
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --chart-1: #00D9FF;
+  --chart-2: #9D4EDD;
+  --chart-3: #FF1B8D;
+  --chart-4: #00FF94;
+  --chart-5: #FFD60A;
+  --sidebar: rgba(255, 255, 255, 0.05);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #00D9FF;
+  --sidebar-primary-foreground: #0A0A0F;
+  --sidebar-accent: rgba(255, 255, 255, 0.08);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(0, 217, 255, 0.5);
+}
+
+/* Light theme with glassmorphism */
+.light {
+  --background: #FFFFFF;
+  --foreground: #0A0A0F;
+  --card: rgba(0, 0, 0, 0.03);
+  --card-foreground: #0A0A0F;
+  --popover: rgba(0, 0, 0, 0.05);
+  --popover-foreground: #0A0A0F;
+  --primary: #0099FF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #9D4EDD;
+  --secondary-foreground: #FFFFFF;
+  --muted: rgba(0, 0, 0, 0.1);
+  --muted-foreground: rgba(0, 0, 0, 0.6);
+  --accent: #FF1B8D;
+  --accent-foreground: #FFFFFF;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: rgba(0, 0, 0, 0.03);
+  --switch-background: rgba(0, 0, 0, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    cursor: none; /* Hide default cursor for custom cursor */
+  }
+  
+  /* Hide cursor on mobile devices */
+  @media (pointer: coarse) {
+    body {
+      cursor: auto;
+    }
+  }
+
+  /* Custom text selection with gradient */
+  ::selection {
+    background: #0A0A0F;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+  }
+  
+  ::-moz-selection {
+    background: #0A0A0F;
+    color: transparent;
+  }
+  
+  /* Gradient text on selection */
+  *::selection {
+    background: rgba(10, 10, 15, 0.95);
+    color: #00D9FF;
+  }
+  
+  *::-moz-selection {
+    background: rgba(10, 10, 15, 0.95);
+    color: #00D9FF;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* Smooth scroll with momentum effect */
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #00D9FF, #9D4EDD, #FF1B8D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-cyan-purple {
+  background: linear-gradient(135deg, #00D9FF, #9D4EDD);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-purple-pink {
+  background: linear-gradient(135deg, #9D4EDD, #FF1B8D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 40px rgba(0, 217, 255, 0.5);
+}
+
+.glow-purple {
+  box-shadow: 0 0 40px rgba(157, 78, 221, 0.5);
+}
+
+.glow-pink {
+  box-shadow: 0 0 40px rgba(255, 27, 141, 0.5);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
