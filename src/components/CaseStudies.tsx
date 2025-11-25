@@ -249,16 +249,16 @@ export function CaseStudies({ theme, language }: CaseStudiesProps) {
   const t = content[language];
 
   return (
-    <section className="py-24 px-6 lg:px-20 relative overflow-hidden" id="work">
+    <section className="py-24 relative overflow-hidden" id="work">
       {/* Wave Divider at bottom */}
       <WaveDivider theme={theme} position="bottom" variant="gradient" />
-      
+
       {/* Animated Background */}
       <SectionBackground theme={theme} variant="alternate" />
-      
-      <div className="max-w-6xl mx-auto relative z-10">
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-20 relative z-10">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -276,9 +276,8 @@ export function CaseStudies({ theme, language }: CaseStudiesProps) {
           {t.caseStudies.map((study, index) => (
             <motion.div
               key={index}
-              className={`group border ${
-                theme === "dark" ? "border-white/10 hover:border-white/20 bg-gradient-to-br from-white/5 to-transparent" : "border-black/10 hover:border-black/20 bg-gradient-to-br from-black/5 to-transparent"
-              } rounded-2xl p-8 transition-all duration-500 backdrop-blur-sm`}
+              className={`group border ${theme === "dark" ? "border-white/10 hover:border-white/20 bg-gradient-to-br from-white/5 to-transparent" : "border-black/10 hover:border-black/20 bg-gradient-to-br from-black/5 to-transparent"
+                } rounded-2xl p-8 transition-all duration-500 backdrop-blur-sm`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -289,9 +288,8 @@ export function CaseStudies({ theme, language }: CaseStudiesProps) {
               <div className="mb-6">
                 <div className={`w-12 h-1 ${study.color} rounded-full mb-4 transition-all duration-300 group-hover:w-20`} />
                 <h3 className="mb-2">{study.title}</h3>
-                <p className={`${
-                  theme === "dark" ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"
-                } cursor-pointer inline-flex items-center gap-1 transition-colors duration-300`}>
+                <p className={`${theme === "dark" ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"
+                  } cursor-pointer inline-flex items-center gap-1 transition-colors duration-300`}>
                   {study.company}
                   <ArrowUpRight className="w-4 h-4" />
                 </p>
@@ -305,17 +303,15 @@ export function CaseStudies({ theme, language }: CaseStudiesProps) {
               {/* Metrics */}
               <div className="mb-6 grid grid-cols-3 gap-4">
                 {study.metrics.map((metric, idx) => (
-                  <motion.div 
-                    key={idx} 
-                    className={`text-center p-4 ${
-                      theme === "dark" ? "bg-white/5" : "bg-black/5"
-                    } rounded-xl transition-colors duration-500`}
+                  <motion.div
+                    key={idx}
+                    className={`text-center p-4 ${theme === "dark" ? "bg-white/5" : "bg-black/5"
+                      } rounded-xl transition-colors duration-500`}
                     whileHover={{ scale: 1.05 }}
                   >
                     <div className={`${theme === "dark" ? "text-green-400" : "text-green-600"} mb-1 transition-colors duration-500`}>{metric.value}</div>
-                    <div className={`text-xs ${
-                      theme === "dark" ? "text-gray-500" : "text-gray-600"
-                    } uppercase tracking-wide transition-colors duration-500`}>
+                    <div className={`text-xs ${theme === "dark" ? "text-gray-500" : "text-gray-600"
+                      } uppercase tracking-wide transition-colors duration-500`}>
                       {metric.label}
                     </div>
                   </motion.div>
@@ -327,9 +323,8 @@ export function CaseStudies({ theme, language }: CaseStudiesProps) {
                 {study.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className={`px-3 py-1 rounded-full ${
-                      theme === "dark" ? "bg-white/5 text-gray-400" : "bg-black/5 text-gray-600"
-                    } text-xs uppercase tracking-wider transition-colors duration-500`}
+                    className={`px-3 py-1 rounded-full ${theme === "dark" ? "bg-white/5 text-gray-400" : "bg-black/5 text-gray-600"
+                      } text-xs uppercase tracking-wider transition-colors duration-500`}
                   >
                     {tag}
                   </span>
@@ -337,11 +332,10 @@ export function CaseStudies({ theme, language }: CaseStudiesProps) {
               </div>
 
               {/* View Case Study Button */}
-              <button 
+              <button
                 onClick={() => setSelectedStudy(index)}
-                className={`mt-6 w-full py-3 rounded-xl ${
-                  theme === "dark" ? "bg-white/5 hover:bg-white/10" : "bg-black/5 hover:bg-black/10"
-                } transition-all duration-300 flex items-center justify-center gap-2 text-sm group-hover:scale-[1.02]`}
+                className={`mt-6 w-full py-3 rounded-xl ${theme === "dark" ? "bg-white/5 hover:bg-white/10" : "bg-black/5 hover:bg-black/10"
+                  } transition-all duration-300 flex items-center justify-center gap-2 text-sm group-hover:scale-[1.02]`}
               >
                 {t.viewCaseStudy}
                 <ArrowUpRight className="w-4 h-4" />
@@ -358,11 +352,10 @@ export function CaseStudies({ theme, language }: CaseStudiesProps) {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className={`p-12 rounded-3xl backdrop-blur-xl border ${
-            theme === "dark"
-              ? "bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent border-blue-500/20"
-              : "bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-transparent border-blue-500/30"
-          } transition-all duration-500`}>
+          <div className={`p-12 rounded-3xl backdrop-blur-xl border ${theme === "dark"
+            ? "bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent border-blue-500/20"
+            : "bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-transparent border-blue-500/30"
+            } transition-all duration-500`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -375,26 +368,25 @@ export function CaseStudies({ theme, language }: CaseStudiesProps) {
                   {language === "en" ? "AI-Powered Projects" : "Proyectos con IA"}
                 </span>
               </div>
-              
+
               <h3 className="mb-4">
-                {language === "en" 
-                  ? "Code / No-Code Portfolio" 
+                {language === "en"
+                  ? "Code / No-Code Portfolio"
                   : "Portfolio Code / No-Code"}
               </h3>
-              
+
               <p className={`${theme === "dark" ? "text-gray-400" : "text-gray-600"} mb-8 max-w-2xl mx-auto text-lg`}>
                 {language === "en"
                   ? "Explore my rapid prototyping projects built with AI-powered tools like Figma Make, v0, Lovable, and Claude."
                   : "Explora mis proyectos de prototipado rápido construidos con herramientas de IA como Figma Make, v0, Lovable y Claude."}
               </p>
-              
+
               <a
                 href="/code-nocode-portfolio"
-                className={`inline-flex items-center gap-2 px-8 py-4 rounded-xl ${
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
-                    : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                } text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25`}
+                className={`inline-flex items-center gap-2 px-8 py-4 rounded-xl ${theme === "dark"
+                  ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+                  : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  } text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25`}
               >
                 {language === "en" ? "View AI Projects" : "Ver Proyectos con IA"}
                 <ArrowUpRight className="w-5 h-5" />

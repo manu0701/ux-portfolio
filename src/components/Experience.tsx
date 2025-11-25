@@ -192,16 +192,16 @@ export function Experience({ theme, language }: ExperienceProps) {
   ];
 
   return (
-    <section className={`pt-24 pb-12 px-6 lg:px-20 relative overflow-hidden transition-colors duration-500`} id="experience">
+    <section className={`pt-24 pb-12 relative overflow-hidden transition-colors duration-500`} id="experience">
       {/* Wave Divider at bottom */}
       <WaveDivider theme={theme} position="bottom" variant="default" />
-      
+
       {/* Animated Background */}
       <SectionBackground theme={theme} variant="default" />
-      
-      <div className="max-w-5xl mx-auto relative z-10">
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-20 relative z-10">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -217,21 +217,19 @@ export function Experience({ theme, language }: ExperienceProps) {
         {/* Timeline */}
         <div className="space-y-12">
           {t.experiences.map((exp, index) => (
-            <motion.div 
-              key={index} 
-              className={`relative pl-8 border-l-2 ${
-                theme === "dark" ? "border-blue-500/30" : "border-blue-500/50"
-              } transition-colors duration-500`}
+            <motion.div
+              key={index}
+              className={`relative pl-8 border-l-2 ${theme === "dark" ? "border-blue-500/30" : "border-blue-500/50"
+                } transition-colors duration-500`}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
             >
               {/* Timeline Dot */}
-              <motion.div 
-                className={`absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 ${
-                  theme === "dark" ? "border-black" : "border-white"
-                } transition-colors duration-500`}
+              <motion.div
+                className={`absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 ${theme === "dark" ? "border-black" : "border-white"
+                  } transition-colors duration-500`}
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
@@ -249,9 +247,8 @@ export function Experience({ theme, language }: ExperienceProps) {
                         href={exp.companyUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${
-                          theme === "dark" ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"
-                        } transition-colors duration-300 inline-flex items-center gap-1`}
+                        className={`${theme === "dark" ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-700"
+                          } transition-colors duration-300 inline-flex items-center gap-1`}
                       >
                         {exp.company}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -277,19 +274,17 @@ export function Experience({ theme, language }: ExperienceProps) {
                 {/* Achievements */}
                 <div className="space-y-2">
                   {exp.achievements.map((achievement, idx) => (
-                    <motion.div 
-                      key={idx} 
-                      className={`flex items-start gap-3 text-sm ${
-                        theme === "dark" ? "text-gray-400" : "text-gray-600"
-                      } transition-colors duration-500`}
+                    <motion.div
+                      key={idx}
+                      className={`flex items-start gap-3 text-sm ${theme === "dark" ? "text-gray-400" : "text-gray-600"
+                        } transition-colors duration-500`}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.2 + idx * 0.1 }}
                     >
-                      <svg className={`w-5 h-5 ${
-                        theme === "dark" ? "text-green-400" : "text-green-600"
-                      } flex-shrink-0 mt-0.5 transition-colors duration-500`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className={`w-5 h-5 ${theme === "dark" ? "text-green-400" : "text-green-600"
+                        } flex-shrink-0 mt-0.5 transition-colors duration-500`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span>{achievement}</span>
@@ -302,12 +297,11 @@ export function Experience({ theme, language }: ExperienceProps) {
         </div>
 
         {/* Additional Info */}
-        <motion.div 
-          className={`mt-16 p-8 rounded-2xl backdrop-blur-xl ${
-            theme === "dark" 
-              ? "bg-gradient-to-br from-blue-500/10 to-purple-500/10 border-blue-500/20" 
-              : "bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-blue-500/30"
-          } border transition-colors duration-500`}
+        <motion.div
+          className={`mt-16 p-8 rounded-2xl backdrop-blur-xl ${theme === "dark"
+            ? "bg-gradient-to-br from-blue-500/10 to-purple-500/10 border-blue-500/20"
+            : "bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-blue-500/30"
+            } border transition-colors duration-500`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -327,11 +321,10 @@ export function Experience({ theme, language }: ExperienceProps) {
                 <div>• No Code Specialist - No Code Hackers</div>
                 <div>• Interaction Design for Usability</div>
                 <div className="mt-3">
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs ${
-                    theme === "dark" 
-                      ? "bg-blue-500/20 text-blue-300 border border-blue-500/30" 
-                      : "bg-blue-500/20 text-blue-700 border border-blue-500/40"
-                  } transition-colors duration-500`}>
+                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs ${theme === "dark"
+                    ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
+                    : "bg-blue-500/20 text-blue-700 border border-blue-500/40"
+                    } transition-colors duration-500`}>
                     {t.moreCertifications}
                   </span>
                 </div>
@@ -354,9 +347,8 @@ export function Experience({ theme, language }: ExperienceProps) {
             <div className="text-center mb-10">
               <h3 className="mb-4 pt-6">{contactContent.title}</h3>
               <p
-                className={`${
-                  theme === "dark" ? "text-gray-400" : "text-gray-600"
-                } text-lg max-w-2xl mx-auto transition-colors duration-500`}
+                className={`${theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  } text-lg max-w-2xl mx-auto transition-colors duration-500`}
               >
                 {contactContent.subtitle}
               </p>
@@ -365,9 +357,8 @@ export function Experience({ theme, language }: ExperienceProps) {
             <div className="flex flex-col items-center gap-6">
               <motion.a
                 href={`mailto:${contactContent.email}`}
-                className={`inline-flex items-center gap-3 px-10 py-5 ${
-                  theme === "dark" ? "bg-white text-black hover:bg-gray-100" : "bg-black text-white hover:bg-gray-800"
-                } rounded-xl transition-all duration-300 text-lg`}
+                className={`inline-flex items-center gap-3 px-10 py-5 ${theme === "dark" ? "bg-white text-black hover:bg-gray-100" : "bg-black text-white hover:bg-gray-800"
+                  } rounded-xl transition-all duration-300 text-lg`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -382,11 +373,10 @@ export function Experience({ theme, language }: ExperienceProps) {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-4 rounded-xl border ${
-                      theme === "dark"
-                        ? "bg-white/5 border-white/10 hover:bg-white/10"
-                        : "bg-black/5 border-black/10 hover:bg-black/10"
-                    } transition-all duration-300 ${link.hoverClasses}`}
+                    className={`p-4 rounded-xl border ${theme === "dark"
+                      ? "bg-white/5 border-white/10 hover:bg-white/10"
+                      : "bg-black/5 border-black/10 hover:bg-black/10"
+                      } transition-all duration-300 ${link.hoverClasses}`}
                     aria-label={link.label}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -402,9 +392,8 @@ export function Experience({ theme, language }: ExperienceProps) {
           </div>
 
           <div
-            className={`flex flex-col md:flex-row justify-between items-center gap-4 text-sm ${
-              theme === "dark" ? "text-gray-500" : "text-gray-600"
-            } transition-colors duration-500`}
+            className={`flex flex-col md:flex-row justify-between items-center gap-4 text-sm ${theme === "dark" ? "text-gray-500" : "text-gray-600"
+              } transition-colors duration-500`}
           >
             <div>{contactContent.copyright}</div>
             <div className="flex gap-6">

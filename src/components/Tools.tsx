@@ -1,16 +1,16 @@
 import { motion } from "motion/react";
 import { SectionBackground } from "./SectionBackground";
-import { 
-  SiFigma, 
-  SiNotion, 
+import {
+  SiFigma,
+  SiNotion,
   SiFramer,
   SiOpenai,
 } from "react-icons/si";
-import { 
-  Sparkles, 
-  Lightbulb, 
-  Search, 
-  Zap, 
+import {
+  Sparkles,
+  Lightbulb,
+  Search,
+  Zap,
   Palette,
   Heart
 } from "lucide-react";
@@ -139,13 +139,13 @@ export function Tools({ theme, language }: ToolsProps) {
   const t = content[language];
 
   return (
-    <section className="py-24 px-6 lg:px-20 relative overflow-hidden" id="tools">
+    <section className="py-24 relative overflow-hidden" id="tools">
       {/* Animated Background */}
       <SectionBackground theme={theme} variant="default" />
-      
-      <div className="max-w-6xl mx-auto relative z-10">
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-20 relative z-10">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -163,11 +163,10 @@ export function Tools({ theme, language }: ToolsProps) {
           {t.tools.map((tool, index) => (
             <motion.div
               key={index}
-              className={`group relative p-6 rounded-2xl backdrop-blur-xl border ${
-                theme === "dark"
-                  ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
-                  : "bg-black/5 border-black/10 hover:bg-black/10 hover:border-black/20"
-              } transition-all duration-500 cursor-pointer overflow-hidden`}
+              className={`group relative p-6 rounded-2xl backdrop-blur-xl border ${theme === "dark"
+                ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
+                : "bg-black/5 border-black/10 hover:bg-black/10 hover:border-black/20"
+                } transition-all duration-500 cursor-pointer overflow-hidden`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -175,26 +174,23 @@ export function Tools({ theme, language }: ToolsProps) {
               whileHover={{ y: -5, scale: 1.02 }}
             >
               {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ${
-                theme === "dark"
-                  ? "bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent"
-                  : "bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent"
-              }`} />
+              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ${theme === "dark"
+                ? "bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent"
+                : "bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent"
+                }`} />
 
               <div className="relative z-10 flex items-start gap-4">
                 {/* Icon */}
-                <div className={`flex-shrink-0 w-12 h-12 rounded-xl ${
-                  theme === "dark" ? "bg-white/10" : "bg-black/10"
-                } flex items-center justify-center transition-all duration-300 group-hover:scale-110`}>
+                <div className={`flex-shrink-0 w-12 h-12 rounded-xl ${theme === "dark" ? "bg-white/10" : "bg-black/10"
+                  } flex items-center justify-center transition-all duration-300 group-hover:scale-110`}>
                   {tool.icon}
                 </div>
 
                 {/* Content */}
                 <div className="flex-1">
                   <h3 className="mb-1 text-lg">{tool.name}</h3>
-                  <p className={`text-sm ${
-                    theme === "dark" ? "text-gray-400" : "text-gray-600"
-                  } transition-colors duration-500`}>
+                  <p className={`text-sm ${theme === "dark" ? "text-gray-400" : "text-gray-600"
+                    } transition-colors duration-500`}>
                     {tool.description}
                   </p>
                 </div>
