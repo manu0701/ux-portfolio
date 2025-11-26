@@ -19,24 +19,24 @@ export function CustomCursor({ theme }: CustomCursorProps) {
       if (element) {
         const computedStyle = window.getComputedStyle(element);
         const bgColor = computedStyle.backgroundColor;
-
+        
         // Change cursor color based on background and theme
-        if (element.classList.contains("glass") ||
-          element.classList.contains("glass-strong") ||
-          element.closest(".glass") ||
-          element.closest(".glass-strong")) {
+        if (element.classList.contains("glass") || 
+            element.classList.contains("glass-strong") ||
+            element.closest(".glass") ||
+            element.closest(".glass-strong")) {
           setCursorColor(theme === "dark" ? "rgba(0, 217, 255, 0.8)" : "rgba(0, 188, 124, 0.9)");
-        } else if (element.tagName === "BUTTON" ||
-          element.tagName === "A" ||
-          element.closest("button") ||
-          element.closest("a")) {
+        } else if (element.tagName === "BUTTON" || 
+                   element.tagName === "A" ||
+                   element.closest("button") ||
+                   element.closest("a")) {
           setCursorColor(theme === "dark" ? "rgba(255, 27, 141, 0.8)" : "rgba(255, 27, 141, 0.9)");
-        } else if (bgColor.includes("rgb(0, 217, 255)") ||
-          bgColor.includes("rgb(0, 188, 124)")) {
+        } else if (bgColor.includes("rgb(0, 217, 255)") || 
+                   bgColor.includes("rgb(0, 188, 124)")) {
           setCursorColor("rgba(255, 255, 255, 0.9)");
         } else {
-          setCursorColor(theme === "dark"
-            ? "rgba(0, 217, 255, 0.6)"
+          setCursorColor(theme === "dark" 
+            ? "rgba(0, 217, 255, 0.6)" 
             : "rgba(0, 188, 124, 0.8)");
         }
       }
@@ -64,8 +64,8 @@ export function CustomCursor({ theme }: CustomCursorProps) {
       <motion.div
         className={`fixed top-0 left-0 pointer-events-none z-[9999] ${theme === "dark" ? "mix-blend-screen" : ""}`}
         animate={{
-          x: mousePosition.x - 10,
-          y: mousePosition.y - 10,
+          x: mousePosition.x - 16,
+          y: mousePosition.y - 16,
         }}
         transition={{
           type: "spring",
@@ -74,16 +74,16 @@ export function CustomCursor({ theme }: CustomCursorProps) {
           mass: 0.3,
         }}
         style={{
-          width: "20px",
-          height: "20px",
+          width: "32px",
+          height: "32px",
         }}
       >
         <div
           className="w-full h-full rounded-full backdrop-blur-sm transition-all duration-300"
           style={{
             background: cursorColor,
-            boxShadow: theme === "dark"
-              ? `0 0 20px ${cursorColor}, 0 0 40px ${cursorColor}`
+            boxShadow: theme === "dark" 
+              ? `0 0 20px ${cursorColor}, 0 0 40px ${cursorColor}` 
               : `0 0 15px ${cursorColor}, 0 0 30px ${cursorColor}`,
             border: theme === "light" ? "2px solid rgba(0, 188, 124, 0.3)" : "none",
           }}
